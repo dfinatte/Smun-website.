@@ -157,11 +157,16 @@
 
         .read-more {
             color: #b8860b;
-            text-decoration: none;
+            background: none;
+            border: none;
             font-weight: bold;
             display: inline-block;
             margin-top: 1rem;
             transition: color 0.3s;
+            cursor: pointer;
+            font-size: 1rem;
+            font-family: inherit;
+            padding: 0;
         }
 
         .read-more:hover {
@@ -175,7 +180,7 @@
             border-top: 2px solid #f0f0f0;
         }
 
-        .blog-content.active {
+        .blog-content.show {
             display: block;
         }
 
@@ -477,9 +482,9 @@
                 Neste artigo, analisamos as resoluções do Conselho de Segurança e os esforços 
                 diplomáticos em curso para estabelecer um cessar-fogo duradouro e proteger a população civil.
             </p>
-            <a href="javascript:void(0);" class="read-more" onclick="toggleBlog(event, 'blog1')">Ver mais →</a>
+            <button class="read-more" onclick="toggleBlog('blog1', this)">Ver mais →</button>
             
-            <div class="blog-content" id="blog1">
+            <div class="blog-content" id="blog1" style="display: none;">
                 <h4>Contexto Histórico</h4>
                 <p>
                     O Oriente Médio tem sido palco de conflitos complexos que envolvem questões territoriais, 
@@ -519,9 +524,9 @@
                 países intensificam negociações sobre metas de emissões. Exploramos as posições 
                 dos principais blocos e o papel dos países em desenvolvimento nas discussões.
             </p>
-            <a href="javascript:void(0);" class="read-more" onclick="toggleBlog(event, 'blog2')">Ver mais →</a>
+            <button class="read-more" onclick="toggleBlog('blog2', this)">Ver mais →</button>
             
-            <div class="blog-content" id="blog2">
+            <div class="blog-content" id="blog2" style="display: none;">
                 <h4>A Urgência Climática</h4>
                 <p>
                     O relatório mais recente do IPCC deixa claro: o tempo para ação decisiva está 
@@ -563,9 +568,9 @@
                 debates no Conselho de Direitos Humanos. Analisamos como diferentes nações 
                 equilibram inovação tecnológica com garantias fundamentais.
             </p>
-            <a href="javascript:void(0);" class="read-more" onclick="toggleBlog(event, 'blog3')">Ver mais →</a>
+            <button class="read-more" onclick="toggleBlog('blog3', this)">Ver mais →</button>
             
-            <div class="blog-content" id="blog3">
+            <div class="blog-content" id="blog3" style="display: none;">
                 <h4>Novos Desafios Digitais</h4>
                 <p>
                     A rápida evolução tecnológica trouxe benefícios inegáveis, mas também criou novos 
@@ -580,7 +585,5 @@
                     proteção de direitos. O desafio é criar normas que sejam eficazes sem sufocar o 
                     desenvolvimento tecnológico.
                 </p>
-                
-                <h4>Privacidade e Proteção de Dados</h4>
-                <p>
-                    A coleta massiva de dados pessoais por empresas e 
+              
+                    
